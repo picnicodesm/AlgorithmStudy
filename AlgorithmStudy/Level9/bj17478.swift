@@ -17,8 +17,6 @@
 import Foundation
 
 func whatIsRecursive(n: Int, current: Int) {
-    
-    
     let line = "____"
     
     var line1 = "\"재귀함수가 뭔가요?\""
@@ -26,6 +24,7 @@ func whatIsRecursive(n: Int, current: Int) {
     var line3 = "마을 사람들은 모두 그 선인에게 수많은 질문을 했고, 모두 지혜롭게 대답해 주었지."
     var line4 = "그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었어.\""
     var line5 = "라고 답변하였지."
+    var answer = "\"재귀함수는 자기 자신을 호출하는 함수라네\""
     
     if current != 0 && current != n {
         for _ in 1...current {
@@ -38,6 +37,14 @@ func whatIsRecursive(n: Int, current: Int) {
     }
     
     if current == n {
+        for _ in 1...current {
+            line1 = line + line1
+            answer = line + answer
+            line5 = line + line5
+        }
+        print(line1)
+        print(answer)
+        print(line5)
         return
     }
     

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0450D1D9289123F00044B6BC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0450D1D8289123F00044B6BC /* main.swift */; };
+		040167CC2899307700599403 /* bj7568.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040167CB2899307700599403 /* bj7568.swift */; };
+		040167CE28993BD400599403 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040167CD28993BD400599403 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,6 +27,10 @@
 		04006E4B2887A8F500638813 /* bj2869.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj2869.swift; sourceTree = "<group>"; };
 		04006E4D2887B18600638813 /* bj10250.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj10250.swift; sourceTree = "<group>"; };
 		04006E4F2887BB6E00638813 /* bj2775.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj2775.swift; sourceTree = "<group>"; };
+		040167C72898F7FB00599403 /* bj2798.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj2798.swift; sourceTree = "<group>"; };
+		040167C9289927E000599403 /* bj2231.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj2231.swift; sourceTree = "<group>"; };
+		040167CB2899307700599403 /* bj7568.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj7568.swift; sourceTree = "<group>"; };
+		040167CD28993BD400599403 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		040B7DAE2883CEA200F06496 /* bj2438.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj2438.swift; sourceTree = "<group>"; };
 		040B7DB02883CFDA00F06496 /* bj 2439.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "bj 2439.swift"; sourceTree = "<group>"; };
 		040B7DB22883D3F100F06496 /* bj10871.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj10871.swift; sourceTree = "<group>"; };
@@ -34,7 +39,8 @@
 		040B7DB82883E65B00F06496 /* bj1110.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj1110.swift; sourceTree = "<group>"; };
 		0450D1D428911B900044B6BC /* bj10872.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj10872.swift; sourceTree = "<group>"; };
 		0450D1D6289121240044B6BC /* bj10870.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj10870.swift; sourceTree = "<group>"; };
-		0450D1D8289123F00044B6BC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0450D1D8289123F00044B6BC /* bj17478.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj17478.swift; sourceTree = "<group>"; };
+		0450D1DA28921E460044B6BC /* bj2447Important.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj2447Important.swift; sourceTree = "<group>"; };
 		04527D2C2878CEFF00632847 /* bj9498.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj9498.swift; sourceTree = "<group>"; };
 		04527D2E2878D24F00632847 /* bj2753.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj2753.swift; sourceTree = "<group>"; };
 		04527D302878D69800632847 /* bj2884.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj2884.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 		04B47F32287C20A600AAC5E2 /* bj11720.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj11720.swift; sourceTree = "<group>"; };
 		04B47F34287C235000AAC5E2 /* bj10809.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj10809.swift; sourceTree = "<group>"; };
 		04B657E6288E9A9B00E6D5F7 /* bj1978.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj1978.swift; sourceTree = "<group>"; };
+		04BF954628940F8B00CD55D2 /* bj11729TimeOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj11729TimeOver.swift; sourceTree = "<group>"; };
 		04CC2EDE287FC1F000EBD424 /* bj1316.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj1316.swift; sourceTree = "<group>"; };
 		04CC2EE0287FC88C00EBD424 /* bj2739.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj2739.swift; sourceTree = "<group>"; };
 		04CC2EE2287FCF7600EBD424 /* bj10950.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bj10950.swift; sourceTree = "<group>"; };
@@ -94,12 +101,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040167C62898F7DD00599403 /* Level10 */ = {
+			isa = PBXGroup;
+			children = (
+				040167C72898F7FB00599403 /* bj2798.swift */,
+				040167C9289927E000599403 /* bj2231.swift */,
+				040167CB2899307700599403 /* bj7568.swift */,
+				040167CD28993BD400599403 /* main.swift */,
+			);
+			path = Level10;
+			sourceTree = "<group>";
+		};
 		0450D1D328911B760044B6BC /* Level9 */ = {
 			isa = PBXGroup;
 			children = (
 				0450D1D428911B900044B6BC /* bj10872.swift */,
 				0450D1D6289121240044B6BC /* bj10870.swift */,
-				0450D1D8289123F00044B6BC /* main.swift */,
+				0450D1D8289123F00044B6BC /* bj17478.swift */,
+				0450D1DA28921E460044B6BC /* bj2447Important.swift */,
+				04BF954628940F8B00CD55D2 /* bj11729TimeOver.swift */,
 			);
 			path = Level9;
 			sourceTree = "<group>";
@@ -147,6 +167,7 @@
 				045B148128852989007BF67D /* Level7 */,
 				04B657E5288E9A8200E6D5F7 /* Level8 */,
 				0450D1D328911B760044B6BC /* Level9 */,
+				040167C62898F7DD00599403 /* Level10 */,
 			);
 			path = AlgorithmStudy;
 			sourceTree = "<group>";
@@ -305,7 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0450D1D9289123F00044B6BC /* main.swift in Sources */,
+				040167CE28993BD400599403 /* main.swift in Sources */,
+				040167CC2899307700599403 /* bj7568.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
