@@ -1,69 +1,36 @@
-// 1018
+// 1436
 /*
- 지민이는 자신의 저택에서 MN개의 단위 정사각형으로 나누어져 있는 M×N 크기의 보드를 찾았다. 어떤 정사각형은 검은색으로 칠해져 있고, 나머지는 흰색으로 칠해져 있다. 지민이는 이 보드를 잘라서 8×8 크기의 체스판으로 만들려고 한다.
+ 666은 종말을 나타내는 숫자라고 한다. 따라서, 많은 블록버스터 영화에서는 666이 들어간 제목을 많이 사용한다. 영화감독 숌은 세상의 종말 이라는 시리즈 영화의 감독이다. 조지 루카스는 스타워즈를 만들 때, 스타워즈 1, 스타워즈 2, 스타워즈 3, 스타워즈 4, 스타워즈 5, 스타워즈 6과 같이 이름을 지었고, 피터 잭슨은 반지의 제왕을 만들 때, 반지의 제왕 1, 반지의 제왕 2, 반지의 제왕 3과 같이 영화 제목을 지었다.
+
+ 하지만 숌은 자신이 조지 루카스와 피터 잭슨을 뛰어넘는다는 것을 보여주기 위해서 영화 제목을 좀 다르게 만들기로 했다.
+
+ 종말의 숫자란 어떤 수에 6이 적어도 3개이상 연속으로 들어가는 수를 말한다. 제일 작은 종말의 숫자는 666이고, 그 다음으로 큰 수는 1666, 2666, 3666, .... 과 같다.
+
+ 따라서, 숌은 첫 번째 영화의 제목은 세상의 종말 666, 두 번째 영화의 제목은 세상의 종말 1666 이렇게 이름을 지을 것이다. 일반화해서 생각하면, N번째 영화의 제목은 세상의 종말 (N번째로 작은 종말의 숫자) 와 같다.
+
+ 숌이 만든 N번째 영화의 제목에 들어간 숫자를 출력하는 프로그램을 작성하시오. 숌은 이 시리즈를 항상 차례대로 만들고, 다른 영화는 만들지 않는다.
  
- 체스판은 검은색과 흰색이 번갈아서 칠해져 있어야 한다. 구체적으로, 각 칸이 검은색과 흰색 중 하나로 색칠되어 있고, 변을 공유하는 두 개의 사각형은 다른 색으로 칠해져 있어야 한다. 따라서 이 정의를 따르면 체스판을 색칠하는 경우는 두 가지뿐이다. 하나는 맨 왼쪽 위 칸이 흰색인 경우, 하나는 검은색인 경우이다.
- 
- 보드가 체스판처럼 칠해져 있다는 보장이 없어서, 지민이는 8×8 크기의 체스판으로 잘라낸 후에 몇 개의 정사각형을 다시 칠해야겠다고 생각했다. 당연히 8*8 크기는 아무데서나 골라도 된다. 지민이가 다시 칠해야 하는 정사각형의 최소 개수를 구하는 프로그램을 작성하시오.
- 
- 입력: 첫째 줄에 N과 M이 주어진다. N과 M은 8보다 크거나 같고, 50보다 작거나 같은 자연수이다. 둘째 줄부터 N개의 줄에는 보드의 각 행의 상태가 주어진다. B는 검은색이며, W는 흰색이다.
- 출력: 첫째 줄에 지민이가 다시 칠해야 하는 정사각형 개수의 최솟값을 출력한다.
+ 입력: 첫째 줄에 숫자 N이 주어진다. N은 10,000보다 작거나 같은 자연수이다.
+ 출력: 첫째 줄에 N번째 영화의 제목에 들어간 수를 출력한다.
  */
 import Foundation
 
-var heightWidth = readLine()!.split(separator: " ").map{ Int(String($0))! }
-// 0: height 1: width
-var board = [[String]]()
+var count = 1
+let N = Int(readLine()!)
+var movieName = 666
 
-for _ in 1...heightWidth[0] {
-    let line = readLine()!.map{ String($0) }
-    board.append(line)
-}
-
-var min = 65
-for h in 0...heightWidth[0] - 8 {
-    for w in 0...heightWidth[1] - 8 {
-        let board88 = getBoard(startWidth: w, startHeight: h, board: board)
-        let newMin = checkBoard(board: board88, min: min)
-        if newMin < min {
-            min = newMin
+while count != N {
+    movieName += 1
+   // check that whether count has 666 or not
+    var temp = movieName
+    while temp > 100 {
+        if temp % 1000 == 666 {
+            count += 1
+            break
+        } else {
+            temp /= 10
         }
     }
 }
-print(min)
 
-func getBoard(startWidth: Int, startHeight: Int, board: [[String]]) -> [[String]] {
-    var returnBoard = [[String]]()
-    for i in 0..<8 {
-        let line = Array(board[startHeight + i][startWidth...startWidth+7])
-        // ArraySlice형이기 때문에 Array형으로 바꾸어 준다.
-        returnBoard.append(line)
-    }
-    return returnBoard
-}
-
-func checkBoard(board: [[String]], min: Int) -> Int {
-    var count1 = 0
-    var count2 = 0
-    // 시작이 W 가정
-    for h in 0..<8 {
-        for w in 0..<8 {
-            if (h + w) % 2 == 0 && board[h][w] != "W" {
-                count1 += 1
-            } else if (h + w) % 2 == 1 && board[h][w] != "B" {
-                count1 += 1
-            }
-        }
-    }
-    // 시작이 B 가정
-    for h in 0..<8 {
-        for w in 0..<8 {
-            if (h + w) % 2 == 0 && board[h][w] != "B" {
-                count2 += 1
-            } else if (h + w) % 2 == 1 && board[h][w] != "W" {
-                count2 += 1
-            }
-        }
-    }
-    return count1 < count2 ? count1 : count2
-}
+print(movieName)
